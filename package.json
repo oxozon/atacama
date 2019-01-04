@@ -11,6 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "tsc",
+    "publish": "tsc; npm version patch; npm publish --access=public; git push; git clean -dfx; yarn",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
