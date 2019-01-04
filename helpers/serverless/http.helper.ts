@@ -1,4 +1,5 @@
-import HttpStatus from 'http-status-codes';
+import * as HttpStatus from 'http-status-codes'
+
 const FULL_OPEN_CORS = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Credentials": true
@@ -6,6 +7,7 @@ const FULL_OPEN_CORS = {
 
 export default class HttpHelper {
   static buildResponse = (status: number, body? : any) => {
+
     /* Validate provided status */
     HttpStatus.getStatusText(status)
 

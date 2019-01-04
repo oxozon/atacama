@@ -1,5 +1,5 @@
-import Optional from 'typescript-optional'
 import jwtDecode from 'jwt-decode';
+import Optional from 'typescript-optional'
 
 export default class AuthHelper {
   private static getJWTOptional = (event : any) =>
