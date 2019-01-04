@@ -20,6 +20,8 @@
     "typescript": "^3.2.2"
   },
   "dependencies": {
+    "@types/node": "^10.12.18",
+    "jwt-decode": "^2.2.0",
     "typescript-optional": "^1.8.0"
   }
 }
