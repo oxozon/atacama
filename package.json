@@ -1,6 +1,6 @@
 {
   "name": "@oxozon/atacama",
-  "version": "1.0.3-0",
+  "version": "1.0.3",
   "description": "Common Helpers for typical TypeScript situations.",
   "dependencies": {
     "jwt-decode": "^2.2.0",
