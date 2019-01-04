@@ -1,0 +1,25 @@
+{
+  "name": "atacama",
+  "version": "1.0.0",
+  "description": "Common Helpers for typical TypeScript situations.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxozon/atacama.git"
+  },
+  "keywords": [],
+  "author": "oxozon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oxozon/atacama/issues"
+  },
+  "homepage": "https://github.com/oxozon/atacama#readme",
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "typescript-optional": "^1.8.0"
+  }
+}
