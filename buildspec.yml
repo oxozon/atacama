@@ -1,0 +1,11 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - npm i
+  build:
+    commands:
+      - tsc
+  post_build:
+    commands:
+      - npm publish --access=public
