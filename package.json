@@ -1,5 +1,5 @@
 {
-  "name": "atacama",
+  "name": "@oxozon/atacama",
   "version": "1.0.0",
   "description": "Common Helpers for typical TypeScript situations.",
   "main": "dist/index.js",
