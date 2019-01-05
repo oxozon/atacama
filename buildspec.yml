@@ -2,7 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm install -g npm-login-cmd
+      - npm install -g npm-login-cmd typescript
       - npm i
   build:
     commands:
