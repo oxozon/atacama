@@ -2,10 +2,12 @@ version: 0.1
 phases:
   install:
     commands:
+      - npm install -g npm-login-cmd
       - npm i
   build:
     commands:
       - tsc
   post_build:
     commands:
+      - npx npm-login-cmd
       - npm publish --access=public
