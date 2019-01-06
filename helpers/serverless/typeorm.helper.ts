@@ -1,5 +1,5 @@
 import { Connection, ConnectionManager, ConnectionOptions, createConnection, getConnectionManager } from 'typeorm'
-import AWS from "aws-sdk";
+const AWS = require("aws-sdk");
 
 /**
 * Database manager class
