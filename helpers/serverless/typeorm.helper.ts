@@ -1,5 +1,6 @@
 import { Connection, ConnectionManager, ConnectionOptions, createConnection, getConnectionManager } from 'typeorm'
-const AWS = require("aws-sdk");
+import { SecretsManager } from "aws-sdk";
+import Optional from 'typescript-optional'
 
 /**
 * Database manager class
@@ -33,16 +34,20 @@ export default abstract class TypeORMHelper {
       console.info("Creating new DB connection")
 
       if(region && secretName) {
-        const client = new AWS.SecretsManager({ region: region }),
-        data = await client.getSecretValue({ SecretId: secretName }).promise(),
-        secret = JSON.parse(data.SecretString)
+        const client = new SecretsManager({ region: region }),
+        data = await client.getSecretValue({ SecretId: secretName }).promise()
 
-        Object.assign(this.options, {
-          host: secret.host,
-          username: secret.username,
-          database: secret.dbnmame,
-          password: secret.password
-        })
+        Optional.ofNullable(data)
+          .map(d => d.SecretString)
+          .map(d =>JSON.parse(d || "{}"))
+          .ifPresent(secret => {
+            Object.assign(this.options, {
+              host: secret.host,
+              username: secret.username,
+              database: secret.dbnmame,
+              password: secret.password
+            })
+          })
       }
 
       Object.assign(this.options, customOptions)
