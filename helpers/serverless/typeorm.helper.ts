@@ -44,7 +44,7 @@ export default abstract class TypeORMHelper {
             Object.assign(this.options, {
               host: secret.host,
               username: secret.username,
-              database: secret.dbnmame,
+              database: secret.dbname,
               password: secret.password
             })
           })
