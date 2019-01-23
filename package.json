@@ -1,6 +1,6 @@
 {
   "name": "@oxozon/atacama",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Common Helpers for typical TypeScript situations.",
   "dependencies": {
     "aws-amplify": "^1.1.19",
