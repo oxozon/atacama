@@ -2,7 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm install -g npm-login-cmd typescript
+      - npm install -g typescript
       - printf "registry=https://npm.pkg.github.com/oxozon\n//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> .npmrc
       - npm i
   build:
@@ -10,5 +10,4 @@ phases:
       - tsc
   post_build:
     commands:
-      - npm run release
-      - npm publish --access=public
+      - npm publish
