@@ -3,11 +3,12 @@ phases:
   install:
     commands:
       - npm install -g npm-login-cmd typescript
+      - printf "registry=https://npm.pkg.github.com/oxozon\n//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> .npmrc
       - npm i
   build:
     commands:
       - tsc
   post_build:
     commands:
-      - npx npm-login-cmd
+      - npm run release
       - npm publish --access=public
